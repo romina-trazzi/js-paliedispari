@@ -22,8 +22,16 @@ var parolaDritta = "";
 for (var i = 0; i < parola.length; i++) {
     console.log(parola[i]);
     parolaDritta = parolaDritta + parola[i];
-} 
+}
 console.log(parolaDritta);  */
+
+// Creiamo una funzione per generare la parola inversa rispetto a quella dell'utente
+
+
+/**
+ * @param {*} parola String - Il valore inserito dall'utente
+ * @returns {*} parolaInversa String - Il valore opposto alla parola inserita dall'utente
+ */
 
 function palindroma (parola) {
 
@@ -38,9 +46,10 @@ function palindroma (parola) {
 
 }
 
+// Salviamo la funzione in una variabile 
 var saveParolaInversa = palindroma(parola);
 
-console.log(saveParolaInversa, parola);
+//console.log(saveParolaInversa, parola);
 
 //Messaggi per l'utente
 if (parola === saveParolaInversa) {

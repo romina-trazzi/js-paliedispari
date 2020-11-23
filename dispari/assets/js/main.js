@@ -17,36 +17,49 @@ if (!(isNaN(userEvenOdds))) {
     alert("Non hai inserito un numero, riprova!");
 } 
 
+function randomPcNumber () {
 // Generiamo un numero random da 1 a 5 per il computer
 var pcNumber = (Math.floor(Math.random() * 4) + 1);
-// console.log(pcNumber);
+return pcNumber;
+}
+
+var savePcNumber = randomPcNumber();
+// console.log(savePcNumber);
 
 // Sommiamo i due numeri
-var sum = userChoice + pcNumber; 
-console.log(sum);
+var sum = userChoice + savePcNumber; 
+// console.log(sum);
 
+function result () {
 // Stabiliamo se la somma dei due numeri è pari o dispari
 var risultato = sum % 2;
 
 if (risultato == 0) {
-    var risultatoFinale = "pari"
+    var risultatoFinale = "pari";
 } else if (risultato != 0) {
-    var risultatoFinale = "dispari"
+    var risultatoFinale = "dispari";
 }
-// console.log(risultatoFinale);
+
+return risultatoFinale;
+
+}
+
+var saveRisultatoFinale = result();
+// console.log(saveRisultatoFinale);
+
 
 // Dichiariamo chi ha vinto con un messaggio all'utente
-var msg = "Il risultato è " + risultatoFinale + ".";
-console.log(msg);
+var msg = "La somma è: " + sum + ". " + "Il risultato è " + saveRisultatoFinale + ".";
+// console.log(msg);
 
-if (userEvenOdds == "pari" && risultatoFinale == "pari") {
-    console.log(msg + " Hai vinto!");
-} else if (userEvenOdds == "dispari" && risultatoFinale == "pari") {
-    console.log(msg + " Hai perso!");
-} else if (userEvenOdds == "dispari" && risultatoFinale == "dispari") {
-    console.log(msg + " Hai vinto!"); 
-} else if (userEvenOdds == "pari" && risultatoFinale == "dispari") {
-    console.log(msg + " Hai perso!");
+if (userEvenOdds == "pari" && saveRisultatoFinale == "pari") {
+   alert(msg + " Hai vinto!");
+} else if (userEvenOdds == "dispari" && saveRisultatoFinale == "pari") {
+    alert(msg + " Hai perso!");
+} else if (userEvenOdds == "dispari" && saveRisultatoFinale == "dispari") {
+   alert(msg + " Hai vinto!"); 
+} else if (userEvenOdds == "pari" && saveRisultatoFinale == "dispari") {
+    alert(msg + " Hai perso!");
 } 
 
 

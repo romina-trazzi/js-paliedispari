@@ -18,9 +18,9 @@ if (!(isNaN(userEvenOdds))) {
 } 
 
 function randomPcNumber () {
-// Generiamo un numero random da 1 a 5 per il computer
-var pcNumber = (Math.floor(Math.random() * 4) + 1);
-return pcNumber;
+    // Generiamo un numero random da 1 a 5 per il computer
+    var pcNumber = (Math.floor(Math.random() * 5) + 1);
+    return pcNumber;
 }
 
 var savePcNumber = randomPcNumber();
@@ -31,17 +31,16 @@ var sum = userChoice + savePcNumber;
 // console.log(sum);
 
 function result () {
-// Stabiliamo se la somma dei due numeri è pari o dispari
-var risultato = sum % 2;
+    // Stabiliamo se la somma dei due numeri è pari o dispari
+    var risultato = sum % 2;
 
-if (risultato == 0) {
-    var risultatoFinale = "pari";
-} else if (risultato != 0) {
-    var risultatoFinale = "dispari";
-}
+    if (risultato == 0) {
+        var risultatoFinale = "pari";
+    } else if (risultato != 0) {
+        var risultatoFinale = "dispari";
+    }
 
-return risultatoFinale;
-
+    return risultatoFinale;
 }
 
 var saveRisultatoFinale = result();
@@ -54,11 +53,9 @@ var msg = "La somma è: " + sum + ". " + "Il risultato è " + saveRisultatoFinal
 
 if (userEvenOdds == "pari" && saveRisultatoFinale == "pari") {
    alert(msg + " Hai vinto!");
-} else if (userEvenOdds == "dispari" && saveRisultatoFinale == "pari") {
-    alert(msg + " Hai perso!");
 } else if (userEvenOdds == "dispari" && saveRisultatoFinale == "dispari") {
    alert(msg + " Hai vinto!"); 
-} else if (userEvenOdds == "pari" && saveRisultatoFinale == "dispari") {
+} else {
     alert(msg + " Hai perso!");
 } 
 
